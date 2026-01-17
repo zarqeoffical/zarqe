@@ -1,62 +1,184 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZARQÉ</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#fffaf6; color:#333; }
-    header { background:#b8860b; color:white; padding:20px; text-align:center; }
-    nav a { margin:0 10px; color:white; text-decoration:none; font-weight:bold; }
-    section { padding:40px 20px; max-width:1000px; margin:auto; }
-    h2 { color:#b8860b; }
-    .products { display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-    .card { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    footer { background:#333; color:white; text-align:center; padding:20px; }
-    .btn { display:inline-block; background:#b8860b; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZARQÉ</title>
+
+<style>
+/* ===== BASIC RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+  background:linear-gradient(180deg,#0f0f0f,#1a1a1a);
+  color:#eee;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#111;
+  text-align:center;
+  padding:25px 15px;
+  border-bottom:1px solid #333;
+}
+
+header h1{
+  color:#d4af37;
+  letter-spacing:2px;
+}
+
+header p{
+  font-size:14px;
+  color:#aaa;
+}
+
+nav a{
+  color:#eee;
+  margin:0 10px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:35px 15px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  color:#d4af37;
+  margin-bottom:15px;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-img{
+  width:100%;
+  max-height:70vh;
+  object-fit:contain;
+  border-radius:14px;
+  margin-top:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* ===== PRODUCT GRID ===== */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card{
+  background:#161616;
+  border-radius:14px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6);
+}
+
+.product-card img{
+  width:100%;
+  max-height:200px;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.product-card h3{
+  font-size:16px;
+  margin:10px 0 5px;
+}
+
+.price{
+  color:#d4af37;
+  font-weight:bold;
+  font-size:15px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  display:inline-block;
+  background:#d4af37;
+  color:#000;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#000;
+  text-align:center;
+  padding:20px;
+  font-size:13px;
+  color:#777;
+}
+</style>
 </head>
-<body><header>
+
+<body>
+
+<header>
   <h1>ZARQÉ</h1>
   <p>Elegant • Timeless • Precious</p>
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
     <a href="#products">Collections</a>
     <a href="#contact">Contact</a>
   </nav>
-</header><section id="home">
+</header>
+
+<section id="home">
   <h2>Distinct by Design</h2>
-  <p>Premium statement jewelry crafted for bold elegance and timeless luxury.</p>
-  <img src="ring.png" alt="ZARQÉ Luxury Ring" style="max-width:100%;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.3);margin-top:20px;">
-<div class="products">
-  <div class="product-card">
-    <img src="ring.png" alt="Men Ring">
-    <h3>Black Onyx Ring</h3>
-    <p class="category">Category: Men Jewelry</p>
-    <p class="price">PKR 4,999</p>
-  </div>  <div class="product-card">
-    <img src="women-ring.png" alt="Women Ring">
-    <h3>Gold Stone Ring</h3>
-    <p class="category">Category: Women Jewelry</p>
-    <p class="price">PKR 5,499</p>
-  </div>
-</div>
-</section><section id="about">
-  <h2>About Us</h2>
-  <p>ZARQÉ brings you unique designs inspired by tradition and modern fashion. We believe jewelry is not just an accessory, it’s an emotion.</p>
-</section><section id="products">
-  <h2>Our Collections</h2>
+  <p>Premium jewelry crafted for modern luxury.</p>
+
+  <!-- HERO IMAGE -->
+  <img src="ring.png" class="hero-img" alt="Luxury Ring">
+</section>
+
+<section id="products">
+  <h2>Our Collection</h2>
+
   <div class="products">
-    <div class="card">Necklace Sets</div>
-    <div class="card">Rings</div>
-    <div class="card">Earrings</div>
-    <div class="card">Bridal Jewelry</div>
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <img src="ring.png">
+      <h3>Black Onyx Ring</h3>
+      <p class="price">PKR 4,999</p>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <img src="women-ring.png">
+      <h3>Gold Stone Ring</h3>
+      <p class="price">PKR 5,499</p>
+    </div>
+
   </div>
-</section><section id="contact">
-  <h2>Contact Us</h2>
-  <p>Order now or ask for details on WhatsApp</p>
-  <a class="btn" href="https://wa.me/923143010926">WhatsApp Us</a>
-</section><footer>
-  <p>© 2026 ZARQÉ | All Rights Reserved</p>
-</footer></body>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Order on WhatsApp</p>
+  <a class="btn" href="https://wa.me/923143010926">WhatsApp</a>
+</section>
+
+<footer>
+  © 2026 ZARQÉ | All Rights Reserved
+</footer>
+
+</body>
 </html>
